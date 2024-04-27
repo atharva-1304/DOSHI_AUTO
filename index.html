@@ -30,53 +30,64 @@
     />
   </head>
   <body>
+   
     <div class="video-container">
       <div class="overlay">
-        <nav
-          class="navbar navbar-expand-lg bg-transparant sticky-top navbar-dark d-flex justify-content-end"
-        >
+        <nav class="navbar   navbar-dark sticky-top">
           <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html"
-              ><img style="height: 30px" src="./images/FAVICON.png" alt=""
-            /></a>
+            <a href=""><img style="height: 20px;" src="./images/FAVICON.png" alt=""></a>
             <button
               class="navbar-toggler"
               type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNavDropdown"
-              aria-controls="navbarNavDropdown"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar"
+            > 
               <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#"
-                    >Home</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">about us</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">product</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">service</a>
-                </li>
-
-                <li class="nav-item">
-                  <a class="nav-link" href="#">contact us</a>
-                </li>
-              </ul>
+            <div
+              class="offcanvas offcanvas-end"
+              tabindex="-1"
+              id="offcanvasNavbar"
+              aria-labelledby="offcanvasNavbarLabel"
+            >
+              <div class="offcanvas-header bg-dark">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">DOSHI AUTOMOBILE</h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="offcanvas-body" style="background-color: black;">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                  <li class="nav-item">
+                    <a class="links "  aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="links " aria-current="page" href="#">product</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="links " aria-current="page" href="#">service</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="links" href="#">contact us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="links" href="#">reviews</a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </nav>
+
+
+       
       </div>
 
-      <!-- You can replace the video URL with your own -->
+      <!-- home page video -->
       <video
         autoplay
         muted
@@ -86,6 +97,7 @@
         id="bgvid"
       >
         <source
+          style="background-position: center"
           src="./images/Vespa_Dragon_2024_Video_1920x800_1-vimeo-903631463-hls-google_mediacdn_sep-4066.mp4"
           type="video/mp4"
         />
@@ -99,26 +111,73 @@
         />
       </div>
     </div>
-    <section class="container-fluid">
-      <div class="inner text-center container">
-        <h1>about us</h1>
-        <p>
-          Welcome to Jalgaon Vespa, your premier destination for all things
-          Vespa and Aprilia in Jalgaon, Maharashtra. As the sole authorized
-          Vespa dealer in the district, we take pride in offering a
-          comprehensive selection of Vespa and Aprilia scooters, catering to
-          every rider's style and preference.
-        </p>
-        <p>
-          Our showroom showcases the latest models from Vespa and Aprilia,
-          ensuring that you have access to the most advanced technology and
-          design innovations in the industry. Whether you're drawn to the
-          timeless elegance of Vespa or the dynamic performance of Aprilia, we
-          have the perfect scooter to match your individuality and riding
-          aspirations.
-        </p>
+
+    <section class="container-fluid contact">
+      <div class="row mx-5">
+        <div class="col-md-5 col-12 mt-5 px-3 py-5 contact-form">
+          <center><h1 style="color: white" class="mb-3">contact us</h1></center>
+          <form action="#">
+            <div class="row g-3">
+              <div class="col">
+                <label for="firstname" class="form-label formtext">name</label>
+                <input
+                  type="text"
+                  required
+                  class="form-control contact-form"
+                  id="firstname"
+                  placeholder="First name"
+                  aria-label="First name"
+                />
+              </div>
+              <div class="col">
+                <label for="lastname" class="form-label formtext"
+                  >last name</label
+                >
+                <input
+                  type="text"
+                  required
+                  class="form-control contact-form"
+                  id="lastname"
+                  placeholder="Last name"
+                  aria-label="Last name"
+                />
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label formtext"
+                >Email address</label
+              >
+              <input
+                type="email"
+                required
+                class="form-control contact-form"
+                id="exampleFormControlInput1"
+                placeholder="xyz@exp.com"
+              />
+            </div>
+            <div class="mb-3">
+              <label
+                for="exampleFormControlTextarea1"
+                class="form-label formtext"
+                >Example textarea</label
+              >
+              <textarea
+                required
+                class="form-control contact-form"
+                id="exampleFormControlTextarea1"
+                rows="3"
+              ></textarea>
+            </div>
+            <div class="d-grid gap-2">
+              <button class="btn contact-form formtext" type="submit">
+                submit
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </section>
+
     <footer style="background-color: rgb(10, 10, 10)">
       <div class="container">
         <div class="row">

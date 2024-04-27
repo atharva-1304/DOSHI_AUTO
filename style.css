@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: 0;
+  box-sizing: border-box;
 }
 
 .footerlogo {
@@ -17,7 +17,7 @@ footer {
   position: relative;
   overflow: hidden;
   height: 100vh;
-  object-fit: cover;
+  object-fit: contain;
 }
 .overlay {
   position: absolute;
@@ -65,4 +65,59 @@ footer {
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+}
+
+.About-us-out {
+  background-image: url(./images/vxl-125-right-front-three-quarter-7-transformed.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.contact{
+  background-image: url(./images/contact.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  
+
+}
+.contact-form{
+      background: transparent;
+      backdrop-filter: blur(5px);
+      border: 1.5px solid rgba(255, 255, 255, 0.5);
+      border-radius: 15px;
+}
+
+.formtext{
+  color: white;
+  font-size: 16px;
+}
+
+.navbar{
+  color: white;
+  background-color: rgba(0, 0, 0, .1);
+}
+.links{
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.nav-item{
+  margin-top:6px ;
+  margin-bottom: 6px;
+}
+.links:hover{
+  color: black;
+}
+.nav-item:hover{
+  background-color: rgba(255, 255, 255,.9);
+  color: black;
+  padding-inline: 20px;
+  border-radius: 25px;
+  transform: translate(10px);
 }
