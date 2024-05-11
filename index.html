@@ -20,7 +20,7 @@
     />
     <link rel="stylesheet" href="style.css" />
     <title>DOSHI AUTO</title>
-    <style></style>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -137,9 +137,15 @@
                   knows no bounds.
                 </p>
                 <p class="text-start">
-                  <a style="color: black;" href=""><i class="fa-brands fa-facebook"></i> </a>
-                  <a style="color: black;" href=""><i class="fa-solid fa-envelope"></i></a>
-                  <a style="color: black;" href=""><i class="fa-brands fa-instagram"></i></a>
+                  <a style="color: black" href=""
+                    ><i class="fa-brands fa-facebook"></i>
+                  </a>
+                  <a style="color: black" href=""
+                    ><i class="fa-solid fa-envelope"></i
+                  ></a>
+                  <a style="color: black" href=""
+                    ><i class="fa-brands fa-instagram"></i
+                  ></a>
                 </p>
               </div>
             </div>
@@ -226,11 +232,96 @@
       </div>
     </main>
 
+    <section id="service">
+      <div class="flip-card">
+        <div class="flip-card-front">
+          <div class="inner">
+            <img src="" class="icon" />
+            <h3 style="text-transform: uppercase;">sagar rajput</h3>
+            <p>
+             jr. mechanic 
+            </p>
+            <p>
+              <i style="margin-inline-end: 5px;" class="fa-brands fa-facebook"></i>
+              <i style="margin-inline-end: 5px;"class="fa-brands fa-instagram"></i>
+              <i style="margin-inline-end: 5px;"class="fa-brands fa-whatsapp"></i>
+            </p>
+          </div>
+        </div>
+        <div class="flip-card-back">
+          <div class="inner">
+            <img src="" class="icon" />
+            <h3  style="text-transform: uppercase;">3 year exp.</h3>
+            <p>
+               <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+               </ul>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-front">
+          <div class="inner">
+            <img src="" class="icon" />
+            <h3 style="text-transform: uppercase;">c. lokhande</h3>
+            <p>
+              workshop manager
+            </p>
+            <p>
+              <i style="margin-inline-end: 5px;" class="fa-brands fa-facebook"></i>
+              <i style="margin-inline-end: 5px;"class="fa-brands fa-instagram"></i>
+              <i style="margin-inline-end: 5px;"class="fa-brands fa-whatsapp"></i>
+            </p>
+          </div>
+        </div>
+        <div class="flip-card-back">
+          <div class="inner">
+            <img src="" class="icon" />
+            <h3 style="text-transform: uppercase;"></h3>
+            <p>
+             
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-front">
+          <div class="inner">
+            <img src="" class="icon" />
+            <h3 style="text-transform: uppercase;">ayyub shaikh</h3>
+            <p>
+             sr. mechanic
+            </p>
+            <p>
+              <i style="margin-inline-end: 5px;" class="fa-brands fa-facebook"></i>
+              <i style="margin-inline-end: 5px;"class="fa-brands fa-instagram"></i>
+              <i style="margin-inline-end: 5px;"class="fa-brands fa-whatsapp"></i>
+            </p>
+          </div>
+        </div>
+        <div class="flip-card-back">
+          <div class="inner">
+            <img src=" " class="icon" />
+            <h3 style="text-transform: uppercase;"></h3>
+            <p>
+              
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+      
+    </section>
+
     <section id="contact" class="container-fluid contact px-3">
       <div class="row mx-4 d-flex align-items-center">
         <div class="col-xl-6 col-12 mt-5 px-3 py-2 pb-3 contact-form">
           <center><h1 style="color: white" class="">contact us</h1></center>
-          <form action="#">
+          <form action="#" onsubmit="sendEmail()">
             <div class="row g-4">
               <div class="col py-2">
                 <label for="firstname" class="form-label formtext">name</label>
@@ -283,7 +374,11 @@
               ></textarea>
             </div>
             <div class="d-grid gap-2">
-              <button class="btn form-btn contact-form formtext" type="submit">
+              <button
+                class="btn form-btn contact-form formtext"
+                type="submit"
+               
+              >
                 submit
               </button>
             </div>
@@ -292,11 +387,7 @@
       </div>
     </section>
 
-    <section id="gallery">
-       
-
-      
-    </section>
+    <section id="gallery"></section>
 
     <footer style="background-color: rgb(10, 10, 10)">
       <div class="container">
@@ -335,6 +426,7 @@
     </footer>
 
     <!-- for product slider -->
+    
     <script>
       let prev = document.querySelector(".prev");
       let next = document.querySelector(".next");
