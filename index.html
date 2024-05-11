@@ -32,61 +32,27 @@
   <body style="overflow-x: hidden">
     <div class="video-container">
       <div class="overlay">
-        <nav id="home" class="navbar navbar-dark sticky-top">
-          <div class="container-fluid">
-            <a href=""
-              ><img style="height: 20px" src="./images/FAVICON.png" alt=""
-            /></a>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="offcanvas"
-              data-bs-target="#offcanvasNavbar"
-              aria-controls="offcanvasNavbar"
-            >
-              <span class="navbar-toggler-icon"></span>
+        <header id="navbar">
+          <nav class="navbar-container container">
+            <a href="/" class="home-link">
+              <div class="navbar-logo"></div>
+              Website Name
+            </a>
+            <button type="button" id="navbar-toggle" aria-controls="navbar-menu" aria-label="Toggle menu" aria-expanded="false">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
             </button>
-            <div
-              class="offcanvas offcanvas-end"
-              tabindex="-1"
-              id="offcanvasNavbar"
-              aria-labelledby="offcanvasNavbarLabel"
-            >
-              <div class="offcanvas-header bg-dark">
-                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-                  DOSHI AUTOMOBILE
-                </h5>
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="offcanvas"
-                  aria-label="Close"
-                ></button>
-              </div>
-              <div class="offcanvas-body" style="background-color: black">
-                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                  <li class="nav-item">
-                    <a class="links" aria-current="page" href="#home">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="links" aria-current="page" href="#product"
-                      >product</a
-                    >
-                  </li>
-                  <li class="nav-item">
-                    <a class="links" aria-current="page" href="#">service</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="links" href="#contact">contact us</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="links" href="#">reviews</a>
-                  </li>
-                </ul>
-              </div>
+            <div id="navbar-menu" aria-labelledby="navbar-toggle">
+              <ul class="navbar-links">
+                <li class="navbar-item"><a class="navbar-link" href="/about">About</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="/blog">Blog</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="/careers">Careers</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="/contact">Contact</a></li>
+              </ul>
             </div>
-          </div>
-        </nav>
+          </nav>
+        </header>
       </div>
 
       <!-- home page video -->
@@ -440,6 +406,23 @@
         let slides = document.querySelectorAll(".slides");
         slider.prepend(slides[slides.length - 1]);
       });
+    </script>
+    <!-- navbar js  -->
+    <script>
+      const navbarToggle = navbar.querySelector("#navbar-toggle");
+const navbarMenu = document.querySelector("#navbar-menu");
+const navbarLinksContainer = navbarMenu.querySelector(".navbar-links");
+let isNavbarExpanded = navbarToggle.getAttribute("aria-expanded") === "true";
+
+const toggleNavbarVisibility = () => {
+  isNavbarExpanded = !isNavbarExpanded;
+  navbarToggle.setAttribute("aria-expanded", isNavbarExpanded);
+};
+
+navbarToggle.addEventListener("click", toggleNavbarVisibility);
+
+navbarLinksContainer.addEventListener("click", (e) => e.stopPropagation());
+navbarMenu.addEventListener("click", toggleNavbarVisibility);
     </script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
